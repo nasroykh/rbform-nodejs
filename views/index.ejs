@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <title>RbForm - Authentification</title>
+</head>
+<body>
+    <header>
+    <div id="sideBar"></div>
+    <img id="title" src="/icons/Group 11.png" width="700px"></img>
+    </header>
+    <main>
+        <div id="bgRec">
+            <div id="homeText">
+                <h1>Bonjour !</h1>
+                <h3>Connectez vous ci-dessous pour pouvoir gérer<br />le recueil des besoins en formations.</h3>
+            </div>
+            <div id="login">
+                <div>
+                    <form action="/login" method="POST">
+                        <h4>Nom d'utilisateur</h4>
+                        <input id="username" type="text" name="username" required>
+                        <h4>Mot de passe</h4>
+                        <input id="password" type="password" name="password" required> 
+                        <div id="loginbtn">
+                            <button type="submit" id="loginbtn"></button>
+                        </div>                     
+                    </form>
+                </div>
+            </div>
+            <div id="logo">
+                <img src="/images/logo.png" alt="" width="270px">
+            </div>
+        </div>
+    </main>
+    
+    <script src="/jquery.js"></script>
+    <script src="/bootstrap.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

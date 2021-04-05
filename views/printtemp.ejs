@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/template.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <title>Recueil 2020</title>
+</head>
+<body>
+<div class="row">
+    <img src="/images/sonatrach-logo-E02719FF1D-seeklogo.com.png" alt="" srcset="" width="100px">
+</div>
+
+<div class="row"> 
+    <div class="lieu">
+        <h4>Activité Liquéfaction et Séparation</h4> 
+        <h4>Division LQS</h4>
+        <h4>Oran</h4>
+    </div>
+</div>
+
+<div class="row">
+    <div class="offset-2 pl-5 titre"><h1>Recueil des Besoins en Formation Année 2020</h1></div>
+</div>
+
+<div class="row mt-3">
+    <div class="dps d-flex flex-column justify-content-center col-9">
+        <h4>Direction : <%=data[0].intitule_dir%></h4> 
+    </div>
+    <div class="dateetpage d-flex flex-column justify-content-center col-3">
+        <h4>Le <span id="datetimeprint"></span></h4>
+    </div>
+</div>
+
+<div class="row">
+    <table class="table table-bordered emptable mt-3">
+        <thead class="tabhead">
+            <th>Matricule</th>
+            <th>Nom et Prenom</th>
+            <th>Fonction</th>
+            <th>Thème</th>
+            <th>Organisme</th>
+            <th>Objectif</th>
+            <th>Observation</th>
+        </thead>
+        <tbody>
+            <% if(data.length > 0){ %>
+
+                <% for ( let i = 0 ; i < data.length ; i++){ %>
+            <tr>
+                <td><%=data[i].matricule%></td>
+                <td><%=data[i].nom%> <%=data[i].prenom%></td>
+                <td><%=data[i].intitule_fonc%></td>
+                <td><%=data[i].intitule_form.toLowerCase()%></td>
+                <td><%=data[i].intitule_org%> <%=data[i].lieu_org%></td>
+                <td><%=data[i].objectif%></td>
+                <td><%=data[i].observation%></td>
+            </tr>
+            <% } %>
+                
+            <% } %>
+        </tbody>
+    </table>
+</div>
+
+    <script src="/jquery.js"></script>
+    <script src="/bootstrap.min.js"></script>
+    <script src="/template.js"></script>
+</body>
+</html>

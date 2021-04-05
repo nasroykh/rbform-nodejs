@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <title>Sélection des Employés</title>
+</head>
+<body class="container-fluid">
+
+    <div class="row">
+        <div class="col-1">
+            <div id="sideBar"></div>
+            <img id="title" src="/icons/Group 11.png" width="700px"></img>       
+        </div> 
+        <div class="col-1 offset-6" style="transform: translate(152px,60px);">
+            <img src="/icons/selecempTitle.png" width="500px" alt=""> 
+        </div> 
+    </div> 
+
+    <div class="row">
+        <div class="offset-1 px-3 py-1 formint" id="formint">
+            
+        </div>
+    </div>
+
+    <div class="row backconfirm">
+        <div class="offset-1 col-2 back">
+            <a href="/toCat" id="backtomodifvalid">
+                <img src="/icons/backButton.png" alt="" height="70px" />
+            </a>
+        </div>
+        <div class="col-2 confirm">
+            <input type="image" id="tolcbtn" style="outline: none;" src="/icons/confirmButton.png" alt="" height="70px" />
+        </div>
+        <div class="offset-1">
+            <table class="table table-bordered" id="dirtable">
+                <tr>
+                    <th>Direction</th>
+                    <td>
+                        <div id="dirselect"><%=dirs[0].intitule_dir%></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Département</th>
+                    <td>  
+                        <div id="depselect" class="d-flex"><%=dirs[0].intitule_dep%></div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Service</th>
+                    <td id="svcselecttd"> 
+                        <select name="svcpicker" id="svcselect">
+                            <option value="">...</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="row" id="empTableH">
+        <div class="col-1 thetablehead" style="flex-basis: 102px;">
+            Matricule
+        </div>
+        <div class="col-4 thetablehead" style="flex-basis: 352px;">
+            Nom & Prénom
+        </div>
+        <div class="col-1 thetablehead" style="flex-basis: 100px;">
+            Départ.
+        </div>
+        <div class="col-1 thetablehead" style="flex-basis: 100px;">
+            Service
+        </div>
+        <div class="col-4 thetablehead" style="flex-basis: 302px;">
+            Fonction
+        </div>
+        <div class="col-1 thetablehead" style="flex-basis: 50px;">
+            
+        </div>
+	</div>
+	
+    <div class="row">
+        <div class="offset-2 col-8 emptableS">
+            <table class="table table-bordered" id="empTable">
+                <tbody id="empselect">
+
+                </tbody>
+            </table>
+        </div>
+	</div>
+	
+	<div class="row">
+		<div class="col-2 offset-5 swap">
+			<img src="/icons/IN.png" alt="" id="inbtn">
+			<img src="/icons/Line 23.png" alt="">
+			<img src="/icons/OUT.png" alt="" id="outbtn">
+        </div>
+        <div class="selectab">
+            Employés sélectionnés
+        </div>
+	</div>
+
+    <div class="row" id="empTableH">
+        <div class="col-1 thetablehead" style="flex-basis: 102px;">
+            Matricule
+        </div>
+        <div class="col-4 thetablehead" style="flex-basis: 352px;">
+            Nom & Prénom
+        </div>
+        <div class="col-1 thetablehead" style="flex-basis: 100px;">
+            Départ.
+        </div>
+        <div class="col-1 thetablehead" style="flex-basis: 100px;">
+            Service
+        </div>
+        <div class="col-4 thetablehead" style="flex-basis: 302px;">
+            Fonction
+        </div>
+        <div class="col-1 thetablehead" style="flex-basis: 50px;">
+            
+        </div>
+	</div>
+
+    <div class="row">
+        <div class="offset-2 col-8 emptableS">
+            <table class="table table-bordered" id="empTable">
+                <tbody id="empselected">
+
+                </tbody>
+            </table>
+        </div>
+	</div>
+    <div id="formation" class="d-none"><%=formation%></div>
+    <div id="id" class="d-none"><%=id%></div>
+    <script src="/jquery.js"></script>
+    <script src="/bootstrap.min.js"></script>
+    <script src="/empseldp.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    padding: 5px 25px;
+}
+.lieu {
+    margin-top: 15px;
+}
+
+.lieu  h4{
+    font-size: 0.9rem;
+    font-weight: bold;
+    line-height: 0.9rem;
+}
+
+.titre h1 {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.dps h4 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.dateetpage h4 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.emptable, .emptable thead, .emptable tbody, .emptable thead th, .emptable tbody tr td {
+    border-color: black;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+
+.emptable thead th, .emptable tbody * {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+}
+
+.tabhead th {
+    background-color: gray;
+}

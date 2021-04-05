@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <title>Document</title>
+</head>
+<body class="container-fluid">
+    <div class="row">
+        <div class="col-1">
+            <div id="sideBar"></div>
+            <img id="title" src="/icons/Group 11.png" width="700px"></img>        
+        </div>
+        <div class="offset-10 home tab">
+            <a href="/toHp">
+                <img src="/icons/homeButton.png" alt="" width="70px">
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col listcree">
+            <h2>Liste crée !</h2>
+            <br />
+            <h2 class="pb-4"><strong><%=formation%></strong></h2>
+            <h3>Le  <strong><%=date%></strong></h3>
+        </div>
+    </div>
+
+    <div class="row mt-5 pt-3">
+        <div class="tab offset-3 mr-3">
+            <a href="/toCat">
+                <img src="/icons/addanothertrainingButton.png" alt="" height="80px" />
+            </a>
+        </div>
+        <div class="tab ml-5">
+            <a href="/toValidList">
+                <img src="/icons/validateemplButton.png" alt="" height="80px" />
+            </a>
+        </div>
+    </div>
+
+    <script src="/jquery.js"></script>
+    <script src="/bootstrap.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

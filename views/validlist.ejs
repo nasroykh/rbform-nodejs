@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <title>Validation des listes</title>
+</head>
+<body class="container-fluid">
+    <div class="row">
+        <div class="col-1">
+            <div id="sideBar"></div>
+            <img id="title" src="/icons/Group 11.png" width="700px"></img>        
+        </div>
+        <div class="offset-10 home tab">
+            <a href="/toHp">
+                <img src="/icons/homeButton.png" alt="" width="70px">
+            </a>
+        </div>
+    </div>
+
+    <div class="validlists mt-5">
+        <ul style="list-style: none;">
+            <% if(data.length > 0){ %>
+
+                <% for ( let i = 0 ; i < data.length ; i++){ %>
+                    <li class="validli">
+                        <div class="row">
+                            <div class="formintetbtn">
+                                <div class="mt-4 py-1 px-2 validformint">
+                                    <%=data[i].formation%>
+                                </div>
+                                <div class="tab editvalidbtn">
+                                    <input type="image" id=toevbtn<%=i%> style="outline: none;" src="/icons/editvalidateButton.png" alt="" height="70px" />
+                                </div>
+                            </div>
+                            <div class="validinfos">
+                                <div class="dervalmod">Dernière Validation / <br />Modification</div>
+                                <div class="validcheck ml-4">
+                                    <div>
+                                        <h3>Chef de service</h3>
+                                        <input type="radio" name="" class="validradio" id="v1radio<%=i%>">
+                                        <h5><%=data[i].v1date%> <br /> <%=data[i].v1time%></h5>
+                                    </div>
+                                    <div class="border border-dark my-5"></div>
+                                    <div>                                
+                                        <h3>Chef de département</h3>
+                                        <input type="radio" name="" class="validradio" id="v2radio<%=i%>">
+                                        <h5><%=data[i].v2date%> <br /> <%=data[i].v2time%></h5>
+                                    </div>
+                                    <div class="border border-dark my-5"></div>
+                                    <div>                                
+                                        <h3>Directeur</h3>
+                                        <input type="radio" name="" class="validradio" id="v3radio<%=i%>">
+                                        <h5><%=data[i].v3date%> <br /> <%=data[i].v3time%></h5>
+                                    </div>
+                                </div>
+                                <div class="validlistcree offset-2">
+                                    <div>
+                                        Liste crée le :
+                                    </div>
+                                    <div>
+                                        <%=data[i].date%> <br /> <%=data[i].time%>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+            <div class="border mr-5"></div>
+            <% } %>
+                
+                <% } %>
+        </ul>
+
+    </div>
+
+    <div class="d-none" id="dps"><%=dps%></div>
+    <div class="d-none" id="fonc"><%=fonc%></div>
+    <script src="/jquery.js"></script>
+    <script src="/bootstrap.min.js"></script>
+    <script src="/validlist.js"></script>
+</body>
+</html>

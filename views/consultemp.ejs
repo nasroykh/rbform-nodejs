@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <title>Consultation</title>
+</head>
+<body class="container-fluid">
+
+    <div class="row">
+        <div class="col-1">
+            <div id="sideBar"></div>
+            <img id="title" src="/icons/Group 11.png" width="700px"></img>       
+        </div> 
+    </div> 
+
+    <div class="row">
+        <div class="offset-1 px-3 py-1 formint">
+            <% if(data.length > 0){ %>
+                <%=data[0].intitule_form%> / <%=data[0].lieu_org%>
+            <% } %>
+        </div>
+    </div>
+
+    <div class="row backconfirm mb-5">
+        <div class="offset-1 col-1 tab mr-5">
+            <input type="image" id="consbackbtn" style="outline: none;" src="/icons/backButton.png" alt="" height="70px" />
+        </div>
+    </div>
+
+    <div class="row" id="validTableH">
+        <div class="col-1 thetablehead" style="flex-basis: 5%;">
+            Matricule
+        </div>
+        <div class="col-2 thetablehead" style="flex-basis: 20%;">
+            Nom & Prénom
+        </div>
+        <div class="col-1 thetablehead" style="flex-basis: 10%;">
+            Départ.
+        </div>
+        <div class="col-1 thetablehead" style="flex-basis: 10%;">
+            Service
+        </div>
+        <div class="col-2 thetablehead" style="flex-basis: 20%;">
+            Fonction
+        </div>
+        <div class="col-2 thetablehead" style="flex-basis: 15%;">
+            Objectif
+        </div>
+        <div class="col-2 thetablehead" style="flex-basis: 15%;">
+            Observation
+        </div>
+        <div class="col-1 thetablehead" style="flex-basis: 7%;">
+            Décision
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="validtableS">
+            <table class="table table-bordered" id="validTable">
+                <tbody>
+                    <% if(data.length > 0){ %>
+
+                        <% for ( let i = 0 ; i < data.length ; i++){ %>
+
+                        <tr class="clickable-row">
+                           <td><%=data[i].matricule%></td>
+                           <td><%=data[i].nom%> <%=data[i].prenom%></td>
+                           <td><%=data[i].code_dep%></td>
+                           <td><%=data[i].code_svc%></td>
+                           <td><%=data[i].intitule_fonc%></td>
+                           <td><input type="text" value="<%=data[i].objectif%>" readonly name="" class="objectif" id="objectif<%=i%>" maxlength="" style="width: 220px;"></td>
+                           <td><input type="text" value="<%=data[i].observation%>" readonly name="" class="observation" id="observation<%=i%>" maxlength="" style="width: 220px;"></td>
+                           <td class="checkbutton"><input type="checkbox" name="" id="vcheck<%=i%>" class="empcheck cons"></td>
+                        </tr>
+                        <% } %>
+                
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div id="formation" class="d-none"><%=formation3%></div>
+    <div id="username" class="d-none"><%=username%></div>
+    <div id="dps" class="d-none"><%=dps%></div>
+    <div id="fonc" class="d-none"><%=fonc%></div>
+    <div id="year" class="d-none"><%=year%></div>
+
+    <script src="/jquery.js"></script>
+    <script src="/bootstrap.min.js"></script>
+    <script src="/consultemp.js"></script>
+</body>
+</html>

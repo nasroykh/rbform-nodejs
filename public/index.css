@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "Rockwell";
+    src: url("fonts/rockwell-nova-cufonfonts-webfont/RockwellNova.woff");
+    }
+
+body {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 10% 90%;
+    background: url(images/107301.png) no-repeat center center fixed;
+    font-family: 'Rockwell';
+    min-width: 1600px;
+    overflow: hidden;
+}
+
+header {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 40px 0 0 70px;
+}
+
+main {
+    grid-column: 1/-1;
+    grid-row: 2/2;
+}
+
+#sideBar {
+    height: 100%;
+    width: 60px;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background-image: url(icons/Rectangle\ 3.png);
+    background-size: cover;
+}
+
+#title {
+    display: none;
+}
+
+#bgRec {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 50% 50%;
+    margin: 80px 100px 0px 170px;
+    height: 600px;
+    width: auto;
+    border: 1px #949494 solid;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.35);
+}
+
+#homeText {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin: 10px 0 0 70px;
+    display: none;
+}
+
+#homeText h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+#homeText h3 {
+    font-size: 1.5rem;
+    margin-left: 40px;
+    font-weight: normal;
+}
+
+#logo {
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    margin: 25% 50% 0 0;
+    display: none;
+}
+
+#login {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    margin: 0 0 100px 150px;
+    position: relative;
+    bottom: 50px;
+    display: none;
+}
+
+#login h4 {
+    text-decoration: underline;
+    font-weight: normal;
+    margin: 0 0 5px 10px;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.48);
+    border-radius: 10px;
+    border: 1px #949494 solid;
+    height: 40px;
+    width: 300px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    font-family: 'Rockwell';
+    font-weight: 100;
+    outline: none;
+}
+
+button[type=submit] {
+    background: url(icons/loginBtn.png);
+    background-size: cover;
+    width: 207px;
+    height: 58px;
+    border: 1px;
+    border-radius: 15px;
+    margin: 10px 0 0 105px;
+    outline: none;
+}
+
+#loginbtn :hover {
+    transition: box-shadow 500ms ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#loginbtn :not( :hover ) {
+    transform: scale(1,1);
+    transition: all 500ms ease-in-out;
+}

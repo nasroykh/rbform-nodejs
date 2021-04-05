@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <title>Page d'Accueil</title>
+</head>
+<body class="container-fluid">
+    <div class="row">
+
+        <div class="col-1">
+            <div id="sideBar"></div>
+            <img id="title" src="/icons/Group 11.png" width="700px"></img>
+            <div id="actualyear">
+                <h2 id="date"></h2>
+            </div>
+        </div>
+        <form class="col-1 offset-8 logout" action="/logout" method="POST">
+            <button></button>
+        </form>
+    </div>
+
+    <div class="row welcomeText1">
+        <div class="offset-4 col-4 welcomeText">
+            <h1>Bonjour Mr. <%= name.toUpperCase() %></h1> 
+            <br /><br />
+            <h2>Que souhaitez-vous faire ?</h2>
+        </div>
+    </div>
+
+    <div class="row tabs">
+        <div class="col-4 tab">
+            <a href="/toCat">
+                <img src="/icons/addDocument.png" alt="" width="300px" >
+            </a>
+        </div>
+
+        <div class="col-4 tab">
+            <a href="/toValidList">
+                <img src="/icons/validateDocument.png" alt="" width="300px" onclick="">
+            </a>
+        </div>
+        
+        <div class="col-4 tab">
+            <a href="/toYear">
+                <img src="/icons/checkDocument.png" alt="" width="300px" onclick="toYear()">
+            </a>    
+        </div>
+    </div>
+
+    <script src="/jquery.js"></script>
+    <script src="/bootstrap.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>

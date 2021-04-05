@@ -1,0 +1,633 @@
+@font-face {
+    font-family: "Rockwell";
+    src: url("fonts/rockwell-nova-cufonfonts-webfont/RockwellNova.woff");
+    }
+
+body {
+    background: url(images/107301.png) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Rockwell';
+    min-width: 1600px;
+    color: black;
+    overflow: hidden;
+}
+
+#sideBar {
+    height: 100%;
+    width: 60px;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    background-image: url(icons/Rectangle\ 3.png);
+    background-size: cover;
+}
+
+#title {
+    margin: 40px 0 0 35px;
+    border-radius: 0 40px 40px 0;
+}
+
+#actualyear {
+    margin: 30% 0 0 44%;
+    background: url(icons/annee.png);
+    background-size: cover;
+    color: black;
+    width: 250px;
+    height: 55px;
+    border-radius: 0 15px 15px 0;
+    display: none;
+}
+
+#actualyear h2 {
+    font-family: 'Rockwell';
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: 4px;
+    padding-top: 3%;
+}
+
+.logout {
+    margin-top: 80px;
+    transform: translateX(135px);
+    position: sticky;
+    display: none;
+}
+.logout button {
+    background: url(icons/logout.png);
+    background-size: cover;
+    width: 250px;
+    height: 61px;
+    border: 1px;
+    outline: none;
+}
+
+.logout :hover {
+    cursor: pointer;
+    transform: scale(1.05,1.05);
+    transition: all 500ms ease-in-out;
+}
+
+.logout :not( :hover ) {
+    transform: scale(1,1);
+    transition: all 500ms ease-in-out;
+}
+
+#home {
+    margin: 70px 0 0 315px;
+    cursor: pointer;
+    position: sticky;
+}
+
+.welcomeText {
+    word-spacing: 5px;
+    font-family: 'Rockwell';
+    margin-top: 30px;
+    display: none;
+}
+
+.welcomeText1 {
+    padding-left: 100px;
+}
+
+.welcomeText h1 {
+    margin-bottom: -10px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.welcomeText h2 {
+    text-align: center;
+}
+
+.tabs {
+    padding-left: 12%;
+    margin-top: 7%;
+}
+
+.tab {
+    cursor: pointer;
+}
+
+.tab :hover, .back :hover, .confirm :hover {
+    transform: scale(1.05,1.05);
+    transition: all 500ms ease-in-out;
+}
+
+.noaccess {
+    pointer-events: none;
+}
+
+.notallowed {
+    cursor: not-allowed;
+}
+
+.tab :not( :hover ), .back :not( :hover ), .confirm :not( :hover ) {
+    transform: scale(1,1);
+    transition: all 500ms ease-in-out;
+}
+
+#year {
+    background-color: rgba(255, 255, 255, 0.48);
+    border-radius: 10px;
+    border: 1px #949494 solid;
+    height: 40px;
+    width: 300px;
+    font-size: 1.7rem;
+    font-family: 'Rockwell';
+    font-weight: 100;
+    outline: none;
+    text-align: center;
+}
+
+#yearBtn {
+    background: url(icons/validateBtn.png);
+    background-size: cover;
+    width: 207px;
+    height: 58px;
+    cursor: pointer;
+    border: 1px;
+    border-radius: 15px;
+    margin: 6% 0 0 11%;
+    outline: none;
+}
+
+.year {
+    margin-top: 13%;
+    padding-left: 12%;
+}
+
+.addBtn {
+    padding-right: 15%;
+    cursor: pointer;
+}
+
+.year div h3 {
+    margin: 0 0 7% 11%;
+    font-family: 'Rockwell';
+}
+
+.cons {
+    pointer-events: none;
+}
+
+.backconfirm {
+    margin-top: 4%;
+}
+
+.back {
+    cursor: pointer;
+}
+
+.confirm {
+    margin-left: 2%;
+}
+
+#cattableH {
+    height: 35px; 
+    margin-left: 267px;
+    margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 30px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    background-color: #FEDDB7;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #949494;
+    border-radius: 50px 50px;
+}
+
+.cattableS {
+    height: 530px;
+    width: 1400px;
+    overflow: auto;
+}
+
+#myTable tbody, #myTable {
+    background-color: #FEDDB7;
+    width: 100%;
+}
+
+#myTable > tbody > tr > td {
+    border-color: #949494;
+    border-width: 2px;
+    font-family: 'Rockwell';
+    font-size: 0.8rem;
+    word-break: break-all;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    padding: 0;
+}
+
+.thetablehead {
+    border: 2px solid #949494;
+    padding: 0;
+    font-family: 'Rockwell';
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(236, 197, 152);
+}
+
+#myTable tbody tr :nth-child(1), #myTable tbody tr :nth-child(2){
+    width: 45%;
+}
+
+#myTable tbody tr {
+    vertical-align: baseline;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: rgb(233, 105, 63);
+}
+
+.formcap {
+    text-transform: capitalize;
+}
+
+.formint {
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Rockwell';
+    white-space: nowrap;
+    border: 1px #949494 solid;
+    border-radius: 45px;
+    background-color: #FEDDB7;
+    transform: translate(-10px,50px);
+}
+
+#dirtable {
+    transform: translateY(-27px);
+}
+
+#dirtable tr th, #dirtable tr td {
+    font-family: 'Rockwell';
+    background-color: #FEDDB7;
+    padding: 2px;
+    border: 2px #949494 solid;
+    text-align: center;
+    word-break: break-all;
+}
+
+#dirtable tr td select, #dirtable tr td select option {
+    background-color: #FEDDB7;
+    outline: none;
+    max-height: 30px;
+    cursor: pointer;
+    border: transparent;
+    width: 100%;
+    text-align-last: left;
+}
+#dirtable tr td select option {
+    background-color: rgb(236, 197, 152);
+}
+
+#dirtable tr td select {
+    -webkit-appearance: none;
+    display: flex;
+    padding-right: 50px;
+    width: 450px;
+}
+
+#dirselect {
+    display: flex;
+    width: 450px;
+}
+
+#dirtable tr #depselecttd:after {
+    content: url(icons/listBrowse.png);
+    position: absolute;
+    top: 35px;
+    left: 530px;
+    pointer-events: none;
+}
+#dirtable tr #svcselecttd:after {
+    content: url(icons/listBrowse.png);
+    position: absolute;
+    top: 65px;
+    left: 530px;
+    pointer-events: none;
+}
+
+.emptableS {
+    height: 150px;
+    overflow-y: scroll;
+}
+
+#empTable , #empTable tbody {
+    background-color: #FEDDB7;
+    width: 100%;
+}
+
+#empTable > tbody > tr > td {
+    border-color: #949494;
+    border-width: 2px;
+    font-family: 'Rockwell';
+    font-size: 0.8rem;
+    word-break: break-all;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    padding: 0;
+}
+
+#empTable tbody tr :nth-child(2){
+    width: 35%;
+}
+#empTable tbody tr :nth-child(3), #empTable tbody tr :nth-child(4), #empTable tbody tr :nth-child(1){
+    width: 10%;
+}
+#empTable tbody tr :nth-child(5){
+    width: 30%;
+}
+#empTable tbody tr :nth-child(6){
+    width: 5%;
+}
+.empcheck {
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+#empTable tbody tr .checkbutton .empcheck {
+    content: url(icons/NotChecked.png);
+    position: relative;
+    width: 23px;
+    height: 23px;
+    top: 2px;
+    right: 0px;
+    outline: none;
+}
+
+#empTable tbody tr .checkbutton .empcheck:checked {
+    content: url(icons/Checked.png);
+    position: relative;
+    width: 23px;
+    height: 23px;
+    top: 2px;
+    right: 0px;
+    outline: none;
+}
+
+#empTableH {
+    height: 35px; 
+    margin-left: 267px;
+}
+
+.swap {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.selectab {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Rockwell';
+    white-space: nowrap;
+    border: 2px #949494 solid;
+    border-radius: 45px;
+    background-color: #FEDDB7;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    transform: translate(105px,25px);
+    padding: 0 12px 0 12px;
+}
+
+.listcree {
+    display: flex;
+    background-color: #FEDDB7;
+    border: 3px #949494 solid;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Rockwell';
+    margin-top: 90px;
+}
+
+.listcree h2 strong {
+    font-size: 1.3rem;
+}
+
+.home {
+    transform: translate(65px,60px);
+}
+
+.homecons {
+    transform: translate(111px,60px);
+}
+
+.validlists {
+    border: 1px #949494 solid;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-left: 60px;
+    width: 1450px;
+    height: 650px;
+}
+
+.formintetbtn {
+    display: flex;
+    flex-direction: column;
+}
+
+.validformint {
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-family: 'Rockwell';
+    border: 1px #949494 solid;
+    border-radius: 45px;
+    background-color: #FEDDB7;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    width: 300px;
+    max-width: 300px;
+}
+
+.validinfos {
+    position: relative;
+    width: 1070px;
+    height: 200px;
+    display: flex;
+}
+
+.dervalmod {
+    margin-bottom: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+    font-family: 'Rockwell';
+    text-align: center;
+    align-self: flex-end;
+}
+
+.validcheck {
+    display: flex;
+    justify-content: space-around;
+}
+
+.validcheck div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 10px 0 10px;
+}
+
+.validcheck div h3 {
+    font-weight: bold;
+    font-family: 'Rockwell';
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.validcheck div h5 {
+    font-family: 'Rockwell';
+    text-align: center;
+    font-size: 1rem;
+}
+
+.validradio {
+    -webkit-appearance: none;
+    content: url(icons/validnotchecked.png);
+    width: 70px;
+    outline: none;
+    pointer-events: none;
+}
+
+.validradio:checked {
+    content: url(icons/validchecked.png);
+    width: 70px;
+    outline: none;
+    pointer-events: none;
+}
+
+.validlistcree {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rockwell';
+    text-align: center;
+    font-size: 1rem;
+}
+
+.validlistcree :nth-child(1) {
+    text-decoration: underline;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#validTableH {
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.validtableS {
+    height: 380px;
+    overflow-y: scroll;
+    margin-left: 115px;
+}
+
+#validTable {
+
+}
+
+.objectif, .observation {
+    font-family: 'Rockwell';
+    word-break: break-all;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    outline: none; 
+    background-color: #FEDDB7; 
+    border: 0px #FEDDB7 solid;
+    height: 30px;
+    color: #212529;
+}
+
+#validTable , #validTable tbody {
+    background-color: #FEDDB7;
+    width: 100%;
+}
+
+#validTable > tbody > tr > td {
+    border-color: #949494;
+    border-width: 2px;
+    font-family: 'Rockwell';
+    word-break: break-all;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    padding: 0;
+}
+
+#validTable tbody tr :nth-child(1){
+    width: 101px;
+}
+#validTable tbody tr :nth-child(2){
+    width: 248px;
+}
+#validTable tbody tr :nth-child(3){
+    width: 124px;
+}
+#validTable tbody tr :nth-child(4){
+    width: 123px;
+}
+#validTable tbody tr :nth-child(5){
+    width: 248px;
+}
+#validTable tbody tr :nth-child(6){
+    width: 223px;
+}
+#validTable tbody tr :nth-child(7){
+    width: 222px;
+}
+#validTable tbody tr :nth-child(8){
+}
+
+#validTable tbody tr .checkbutton .empcheck {
+    content: url(icons/NotChecked.png);
+    width: 23px;
+    height: 23px;
+    margin: 4px 39px 0 39px;
+    outline: none;
+}
+
+#validTable tbody tr .checkbutton .empcheck:checked {
+    content: url(icons/Checked.png);
+    width: 23px;
+    height: 23px;
+    outline: none;
+}
+
+#inbtn, #outbtn {
+    cursor: pointer;
+}
+
+.consprintbtn {
+    transform: translate(-50px,60px);
+}
+
+.consgenbtn {
+    transform: translate(0px,60px);
+}
